@@ -21,13 +21,16 @@ body {
     /* display: flex; */
     /* debug */
     border: 2px solid red;
+    
 }
 
+/* flex: top of each other */
 .top-col {
 
     width: 100%;
     height: calc(100% - 80px);
     border: 2px solid purple;
+    display: flex;
     
 }
 
@@ -41,7 +44,7 @@ border: 2px solid green;
 
 .left-col {
     width: 200px;
-    height: calc(100% - 80px);
+    /* height: calc(100% - 80px); */
     border: 2px solid orange;
 
 }
@@ -54,13 +57,40 @@ border: 2px solid green;
     margin-bottom: 10px;
 }
 
+/* genitore overflow and calc */
 .right-col {
     width: calc(100% - 200px);
-    
-    border: 3px solid ;
+    border: 3px solid blue;
+    overflow: auto;
 }
 
-.content {
-    height: calc(100% - 80px);
+.header {
+    padding: 30px;
+    background-color: beige;
     
 }
+
+/* height: 100% del genitore(top-col) */
+.content {
+    height: 100%; 
+    padding-top: 20px;
+    /* overflow: auto;*/
+    background-color:azure;
+}
+
+
+
+/************************************************
+   TABLET
+ ************************************************/
+
+
+
+
+
+
+
+
+ /************************************************
+   MOBILE
+ ************************************************/
