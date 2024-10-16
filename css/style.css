@@ -59,14 +59,7 @@ border: 2px solid green;
     /* display: flex; */
 
 
-.side-bar-list li  {
-    margin-bottom: 10px;
-    color: white;
-}
 
-a {
-    color: white;
-}
 
 /* genitore overflow and calc */
 .right-col {
@@ -78,11 +71,7 @@ a {
 /* check this later */
 .header {
     padding: 20px;
-    position: fixed;
-    top:0;
-    right:0;
-    left:200px;
-    z-index: 1000;
+   
 
     /* debug */
     border: 1px solid black;
@@ -113,20 +102,89 @@ border:1px solid black;
 .side-bar-items {
 display: flex;
 flex-direction: column;
-gap: 30px;
+justify-content:space-between ;
+gap: 40px;
+height: 100%;
 }
 
-.side-top {
-   
+.side-bar-list li {
+    margin-bottom: 10px;
+    color: white;
+    padding: 5px;
+    font-size: 10px;
 }
 
+h4 {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.span-big {
+    font-size: 15px;
+}
+.span-bigger {
+    font-size: 25px;
+}
+
+a {
+    color: white;
+}
+
+/* .side-top {
+    margin-top: 10px; 
+} */
+
+.spotify {
+    padding: 20px 0;
+}
 
 .logo-img {
     /* width:40px; */
     height: 40px;
-    
 }
 
+.side-top .logo-img,
+.side-top .brand {
+    vertical-align: middle;  
+}
+
+.side-top .brand {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.crea-playlist .logo,
+.crea-playlist .title {
+    vertical-align: middle
+}
+
+.divider {
+    margin: 10px;
+}
+
+.john-doe .circle-profile,
+.john-doe .john-doe-title {
+    vertical-align: middle;
+
+}
+
+.circle-profile {
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    font-size:  10px;
+}
+.john-doe-title {
+    font-size: 15px;
+}
+
+.john-doe {
+    padding-bottom: 10px;
+}
 
 
 /************************************************
