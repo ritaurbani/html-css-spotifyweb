@@ -35,7 +35,6 @@ img {
     height: calc(100% - 80px);
     border: 2px solid purple;
     display: flex;
-    
 }
 
 .bottom-col {
@@ -58,9 +57,6 @@ border: 2px solid green;
 /* .side-bar-items{
     /* display: flex; */
 
-
-
-
 /* genitore overflow and calc */
 .right-col {
     width: calc(100% - 200px);
@@ -71,15 +67,11 @@ border: 2px solid green;
 /* check this later */
 .header {
     padding: 20px;
-    
-   
-
     /* debug */
     border: 2px solid violet;
     background-color: black;
     display: flex;
-    justify-content: flex-end;
-   
+    justify-content: flex-end;  
 }
 
 /* height: 100% del genitore(top-col) */
@@ -230,9 +222,35 @@ a {
    TABLET
  ************************************************/
 
+@media screen and (max-width: 768px) {
+    
+.album-col {
+        width: calc(100% / 4);
 
+        /* debug */
+        /* border: 1px solid black; */
+        min-height: 20px;
+        text-align: center;
+    }
 
+.card {
+        padding: 5px;
+    }
 
+     .content {
+        height: 100%;
+        padding: 30px 5px 5px;
+        /* overflow: auto;*/
+        background-color: azure;
+
+    }
+
+        .title-subtitle {
+            padding-left: 5px;
+        }
+
+ 
+    }
 
 
 
@@ -240,3 +258,52 @@ a {
  /************************************************
    MOBILE
  ************************************************/
+@media screen and (max-width: 480px) {
+
+.album-col {
+        width: calc(100% / 2);
+
+        /* debug */
+        /* border: 1px solid black; */
+        min-height: 20px;
+        text-align: center;
+    }
+
+    .brand {display: none;}
+
+    .home {display: none;}
+
+    .cerca {display: none;}
+
+    .library {display: none;}
+
+    .playlist {display: none;}
+
+    .crea-playlist1 {display: none;}
+
+    .new-playlist {display: none;}
+
+    .john-doe-title {display: none;}
+    
+    .divider {display: none;}
+
+    .install-app {display: none;}
+
+    .circle-profile {margin-top: 20px;
+    font-size: 50px;}
+    ---------------------
+     .top-col {
+    
+     width: 100%;
+                      
+    } 
+
+    .left-col {
+    width: 60px;}
+
+    .right-col {
+        width: calc(100% - 60px);
+    }
+               
+
+}
