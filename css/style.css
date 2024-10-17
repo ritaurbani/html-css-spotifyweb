@@ -11,31 +11,72 @@
     box-sizing: border-box;
 }
 
+/* TYPOGRAPHY */
+
 body {
     font-family: "Montserrat", sans-serif;
     color: white;
 }
 
-img {
-    max-width: 100%;
+h4 {
+    font-size: 13px;
+    font-weight: 700;
 }
+
+/* UTILITIES */
+.small {
+    font-size: 10px;
+}
+
+.bigger {font-size: 10px;}
+
+.padding-left {padding-left: 10px;}
 
 .white {color: white;}
 
 .grey {color: #7D7F84;}
+
+.span-big {
+    font-size: 15px;
+}
+
+.span-bigger {
+    font-size: 25px;
+}
+
+a {
+    color: #7D7F84;
+    text-decoration: none;
+}
+
+/* COMMON */
+
+img {
+    max-width: 100%;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: black;
+    Padding: 10px 20px;
+    Border-radius: 30px;
+    Font-size: 0.7rem;
+    color: white;
+    border: 1px solid white;
+}
+
+/* STUTTURA LAYOUT*/
 
 .wrapper {
     width: 100%;
     height: 100vh;
     /* display: flex; */
     /* debug */
-    /* border: 2px solid red; */
-    
+    /* border: 2px solid red; */  
 }
 
 /* flex: top of each other */
 .top-col {
-
     width: 100%;
     height: calc(100% - 80px);
     /* border: 2px solid purple; */
@@ -50,62 +91,46 @@ background-color: #282828;
 /* border: 2px solid green; */
 }
 
-/* 2-level */
-
 .left-col {
     width: 200px;
     /* height: calc(100% - 80px); */
     /* border: 2px solid orange; */
     background-color: #000000;
     color: white;
-
 }
-
-/* .side-bar-items{
-    /* display: flex; */
 
 /* genitore overflow and calc */
 .right-col {
     width: calc(100% - 200px);
-    overflow: auto;
-    
-    /* border: 3px solid blue; */
+    /* overflow: auto; */
 }
 
 /* check this later */
 .header {
     padding: 20px;
- 
-
-    /* debug */
-    /* border: 2px solid violet; */
     background-color: #080B12;
     display: flex;
     justify-content: flex-end;  
+
+    position: fixed;
+    width: calc(100% - 200px);
 }
 
 /* height: 100% del genitore(top-col) */
 .content {
-    height: 100%; 
+    /* height: 100%;  */
+    height: calc(100% - 76px);
     padding: 30px 30px 30px ;
-    /* overflow: auto;*/
+    margin-top: 76px;
     background-color:#141922;
-    /* overflow: auto; */
+    overflow-y: auto;
 }
 
-.btn {
-text-decoration:none;
-background-color: black;
-Padding: 10px 20px;
-Border-radius:30px;
-Font-size: 0.7rem;
-color:white;
-border:1px solid white;
-}
+/* DETAILS */
+
+/* NAV-MENU IN CONTENT SECTION */
 
 .nav-menu {
-
-    /* border: 1px solid white; */
     padding-bottom: 30px;
 }
 
@@ -116,8 +141,10 @@ border:1px solid white;
     flex-wrap: wrap;
     list-style: none;
     gap: 30px;
-    font-size: 15PX;
+    font-size: 10PX;
 }
+
+/* SIDE-BAR */
 
 .side-bar-items {
 padding-left: 10px;
@@ -135,27 +162,6 @@ height: 100%;
     font-size: 10px;
     list-style: none;
 }
-
-h4 {
-    font-size: 13px;
-    font-weight: 700;
-}
-
-.span-big {
-    font-size: 15px;
-}
-.span-bigger {
-    font-size: 25px;
-}
-
-a {
-    color: #7D7F84;
-    text-decoration: none;
-}
-
-/* .side-top {
-    margin-top: 10px; 
-} */
 
 .spotify {
     padding: 20px 0;
@@ -176,17 +182,15 @@ a {
     font-weight: 700;
 }
 
-.crea-playlist .logo,
-.crea-playlist .title {
-    vertical-align: middle
-}
-
 .divider {
     margin: 10px;
 }
 
 .john-doe .circle-profile,
-.john-doe .john-doe-title {
+.john-doe .john-doe-title,
+.crea-playlist .logo,
+.crea-playlist .title
+ {
     vertical-align: middle;
 }
 
@@ -199,9 +203,6 @@ a {
     line-height: 20px;
     text-align: center;
     font-size:  10px;
-}
-.john-doe-title {
-    font-size: 15px;
 }
 
 .john-doe {
@@ -224,6 +225,23 @@ a {
 
 .card {
     padding: 20px;
+    position: relative;
+}
+
+.overlay {
+    /*this way div is above img*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    /*per centrare testo-flex*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
 }
 
 .subtitle {
@@ -245,6 +263,8 @@ a {
     /* font-size: 10px; */
 }
 
+/* FOOTER/BOTTOM */
+
 .bottom-col {
     background-color: black;
 }
@@ -253,7 +273,6 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
 }
 
 .song-playing img {
@@ -264,24 +283,37 @@ a {
     padding-left: 20px;
 }
 
+.bottom-left {
+    flex-grow: 1;
+}
 
 .bottom-center {
 
     display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-        text-align: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 2;
 }
 
+.bottom-right {
+    flex-grow: 1;
+    text-align: right;
+    margin: 10px;
+    }
+
 .bottom-center-up {
-    padding: 20px;
     font-size: 7px;
     display: flex;
     justify-content: space-between;
     align-content: center;
     gap: 40px; display: flex;
 }     
+
+.bottom-right i {
+    padding: 10px;
+}
 
 .core-buttons {
    display: flex;
@@ -294,20 +326,50 @@ a {
 }
 
 .progressbar {
-        width: 200%;
-        height: 8px;
+        width: 100%;
+        height: 4px;
         border-radius: 5px;
+    }
+
+.volume-slider {
+    background: transparent;
+    color: green;
+    height: 2px;
+        
+    background: #7D7F84;
+    border-radius: 50%;
+    cursor: pointer;
     }
 
     /* HOVER */
 
     .side-bar-list li:hover,
     .new-playlist a:hover,
-    .install-app:hover {
+    .nav-menu-list a:hover,
+    .install-app:hover,
+    i:hover {
         color:white
     }
-/* 
-    .side-bar-list li */
+
+     .btn:hover {
+        transform: scale(1.2);
+        }
+
+        .play-size {font-size: 30px;}
+
+        .quite-place-img {display: block;}
+
+        .overlay {display: none;}
+                        
+        .card:hover .quite-place-img{
+            display: none;
+        }
+    
+        .card:hover .overlay {
+            display: block;
+        }
+
+        /* PSEUDO-ELEMENT */
 
      .highlight::after {
         content: "";
@@ -319,7 +381,7 @@ a {
         margin-top: 3px;
         }
     
-
+   
      
 /************************************************
    TABLET
@@ -337,7 +399,7 @@ a {
     }
 
 .card {
-        padding: 5px;
+        padding: 5px; 
     }
 
      .content {

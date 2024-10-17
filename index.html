@@ -49,11 +49,11 @@
                     </div>
                     <div class="side-bottom">
                         <span><i class="fa-regular fa-circle-down"></i></span>
-                        <span class="install-app grey">Installa app</span>
+                        <span class="install-app grey small">Installa app</span>
                         <hr class="divider">
                         <div class="john-doe">
                             <img src="./css/img/profile.svg" alt="" class="circle-profile">
-                            <span class="john-doe-title">John Doe</span>
+                            <span class="john-doe-title small">John Doe</span>
                         </div>
                     </div>
                 </div>
@@ -92,6 +92,8 @@
                             <div class="album-col">
                                 <div class="card">
                                     <img src="./css/img/metal_lifting.jpg" alt="">
+                                </div>
+                                <div class="album-titles"> 
                                     <h4>Heavy Metal</h4>
                                     <h5>Subtitle</h5>
                                 </div>   
@@ -105,9 +107,14 @@
                             </div>
                             <div class="album-col">
                                 <div class="card">
-                                    <img src="./css/img/aquietplace.jpeg" alt="">
-                                    <h4>A quiet place</h4>
-                                    <h5>Subtitle</h5>
+                                    <img src="./css/img/aquietplace.jpeg" alt="quite-place-img" class="">
+                                    <div class="overlay">
+                                        <i class="fa-regular fa-circle-play play-size"></i>
+                                    </div>
+                                    <div class="album-titles">
+                                        <h4>A quiet place</h4>
+                                        <h5>Subtitle</h5>
+                                    </div>    
                                 </div>   
                             </div>
                             <div class="album-col">
@@ -191,11 +198,10 @@
                 <div class="bottom-left">
                     <div class="song-playing">
                         <!-- The name of the currently playing song -->
-                        <img src="./css/img/sinister.jpeg" alt="" class="song-playing img">
-                        <span class="song-playing-name">Sinister</span>
-                    <!-- </div>
-                    <div class="little-icons"> -->
-                        <span class="little-icons">
+                        <img src="./css/img/sinister.jpeg" alt="" class="song-playing img padding-left">
+                        <span class="song-playing-name  small ">Sinister</span>
+                   
+                        <span class="little-icons grey">
                             <i class="fa-regular fa-heart"></i>
                             <i class="fa-regular fa-folder"></i>
                         </span>
@@ -204,9 +210,9 @@
 
                 <div class="bottom-center">
 
-                    <div class="bottom-center-up">
+                    <div class="bottom-center-up grey">
                         <i class="fa-solid fa-shuffle large-icon"></i>
-                        <div class="core-buttons">
+                        <div class="core-buttons grey">
                             <i class="fas fa-3x fa-step-backward" class="previous"></i>
                             <i class="far fa-3x fa-play-circle" class="masterPlay"></i>
                             <i class="fas fa-3x fa-step-forward" class="next"></i>
@@ -221,13 +227,14 @@
                     </div>
                 </div>
 
-                <div class="bottom-right">
+                <div class="bottom-right grey">
                     <i class="fa-solid fa-list"></i>
                     <i class="fa-solid fa-desktop"></i>
                     <i class="fa-solid fa-volume-high"></i>
-                    
+                    <input type="range" class="volume-slider">
+
                 </div>
-                
+                <!--/ FOOTER -->
 
             </div>
             
