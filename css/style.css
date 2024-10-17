@@ -130,6 +130,7 @@ height: 100%;
     color: #7D7F84;;
     padding: 5px;
     font-size: 10px;
+    list-style: none;
 }
 
 h4 {
@@ -251,9 +252,13 @@ a {
     align-items: center;
 }
 
+
+
 .song-playing img {
     width: 30px;
 }
+
+
 
 .bottom-center {
 text-align: center;
