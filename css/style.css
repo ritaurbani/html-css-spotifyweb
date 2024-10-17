@@ -299,6 +299,28 @@ a {
         border-radius: 5px;
     }
 
+    /* HOVER */
+
+    .side-bar-list li:hover,
+    .new-playlist a:hover,
+    .install-app:hover {
+        color:white
+    }
+/* 
+    .side-bar-list li */
+
+     .highlight::after {
+        content: "";
+        /* height: ; */
+        margin: 0 auto;
+        border-bottom: 2px solid greenyellow;
+        width: 40px;
+        display: block;
+        margin-top: 3px;
+        }
+    
+
+     
 /************************************************
    TABLET
  ************************************************/
