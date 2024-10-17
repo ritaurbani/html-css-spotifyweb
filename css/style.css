@@ -245,6 +245,35 @@ a {
     background-color: black;
 }
 
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song-playing img {
+    width: 30px;
+}
+
+.bottom-center {
+text-align: center;
+    
+}
+
+.bottom-center-up {
+    padding: 20px;
+    font-size: 7px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+   
+}
+
+.progressbar {
+    width: 400%;
+}
+
+
 /************************************************
    TABLET
  ************************************************/
