@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: white;
 }
 
@@ -75,6 +75,8 @@ background-color: #282828;
 /* check this later */
 .header {
     padding: 20px;
+ 
+
     /* debug */
     /* border: 2px solid violet; */
     background-color: #080B12;
@@ -88,6 +90,7 @@ background-color: #282828;
     padding: 30px 30px 30px ;
     /* overflow: auto;*/
     background-color:#141922;
+    /* overflow: auto; */
 }
 
 .btn {
@@ -250,19 +253,25 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  
 }
-
-
 
 .song-playing img {
     width: 30px;
 }
 
+.little-icons {
+    padding-left: 20px;
+}
 
 
 .bottom-center {
-text-align: center;
-    
+
+    display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        text-align: center;
 }
 
 .bottom-center-up {
@@ -270,14 +279,25 @@ text-align: center;
     font-size: 7px;
     display: flex;
     justify-content: space-between;
-    gap: 30px;
-   
+    align-content: center;
+    gap: 40px; display: flex;
+}     
+
+.core-buttons {
+   display: flex;
+   justify-content: space-between;
+   gap: 30px;   
+}
+
+.large-icon {
+    font-size: 20px;
 }
 
 .progressbar {
-    width: 400%;
-}
-
+        width: 200%;
+        height: 8px;
+        border-radius: 5px;
+    }
 
 /************************************************
    TABLET
